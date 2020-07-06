@@ -18,6 +18,9 @@ x.addEventListener("click", do_stuff);
 
 function do_stuff(btn) {
   btn.preventDefault();
+  $("#p1").html("");
+  $("#p2").html("");
+
   (joke = ""), (setup = ""), (delivery = "");
   console.log("The button has been clicked");
   if (document.getElementById("any").checked) {
