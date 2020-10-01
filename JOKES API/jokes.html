@@ -8,51 +8,63 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <script src="./AJAX.js"></script>
+    <script defer src="./AJAX.js"></script>
+    <link rel="stylesheet" href="./jokes.css" />
     <title>Document</title>
   </head>
   <body>
     <form>
-      <div>
-        <h3>Choose the type of the Joke</h3>
-        <input type="radio" id="any" name="xxx" value="any" checked="true" />
-        <label for="any">Any</label>
+      <div class="form-div">
+        <div class="c1">
+          <h3>Choose the type of the Joke</h3>
+          <div class="c1-input">
+            <input
+              type="radio"
+              id="any"
+              name="xxx"
+              value="any"
+              checked="true"
+            />
+            Any
 
-        <input type="radio" value="Programming" name="xxx" id="prog" />
-        Programming
-        <input type="radio" value="Miscellaeneous" name="xxx" id="misc" />
-        Miscellaneous
-        <input type="radio" value="Dark" name="xxx" id="dark" /> Dark
+            <input type="radio" value="Programming" name="xxx" id="prog" />
+            Programming
+            <input type="radio" value="Miscellaeneous" name="xxx" id="misc" />
+            Miscellaneous
+            <input type="radio" value="Dark" name="xxx" id="dark" /> Dark
+          </div>
+        </div>
+
+        <div class="c2">
+          <h3>Select flags to blacklist: (OPTIONAL)</h3>
+          <div class="c2-input">
+            <input type="checkbox" value="nsfw" id="nsfw" /> NSFW
+            <input type="checkbox" value="religious" id="religious" /> RELIGIOUS
+            <input type="checkbox" value="political" id="political" /> POLITICAL
+            <input type="checkbox" value="racist" id="racist" /> RACIST
+            <input type="checkbox" value="sexist" id="sexist" /> SEXIST
+          </div>
+        </div>
+
+        <div class="c3">
+          <h3>Select atleast one joke type</h3>
+          <div class="c3-input">
+            <input
+              type="radio"
+              id="tp1"
+              name="SEXY"
+              value="single"
+              checked="true"
+            />SINGLE
+            <input type="radio" value="twopart" name="SEXY" id="tp2" />
+            TWOPART
+          </div>
+        </div>
+
+        <button id="btn">GET JOKE</button>
       </div>
-      <br />
-      <div>
-        <h3>Select flags to blacklist: (OPTIONAL)</h3>
-        <input type="checkbox" value="nsfw" id="nsfw" /> NSFW
-        <input type="checkbox" value="religious" id="religious" /> RELIGIOUS
-        <input type="checkbox" value="political" id="political" /> POLITICAL
-        <input type="checkbox" value="racist" id="racist" /> RACIST
-        <input type="checkbox" value="sexist" id="sexist" /> SEXIST
-      </div>
-      <br />
-      <div>
-        <h3>Select atleast one joke type</h3>
-        <input
-          type="radio"
-          id="tp1"
-          name="SEXY"
-          value="single"
-          checked="true"
-        />SINGLE
-        <input type="radio" value="twopart" name="SEXY" id="tp2" />
-        TWOPART
-      </div>
-      <br />
-      <br />
-      <button id="btn">GET JOKE</button>
     </form>
-    <br />
-    <br />
-    <br />
+
     <div id="output">
       <h1 id="p1"></h1>
       <h1 id="p2"></h1>
